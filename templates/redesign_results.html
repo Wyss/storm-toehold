@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<title>STORM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+<meta charset="utf-8">
+<head>
+    <h1 style="text-align:center" ><IMG SRC="/static/images/storm_logo-01.png" ALT="storm logo" align="middle" WIDTH=400 HEIGHT=170></h1>
+</head>
+<body style='margin-top:100;margin-left:100;margin-right:100;'>
+    <h2 style="text-align:left" >Here are your results predicted by STORM:</h2>
+
+    <h2 style="text-align:left" >
+        <div class="wrapper" id="my_table" name="my_table">
+            {{result|safe}}
+        </div>
+    </h2>
+    <h2><button type="export">Export table to CSV file</button></h2>
+    
+    <br><h2><a href="/">Click here to try another sequence</a></h2>
+    
+    <h2 style="text-align:left" >For more detailed result logs including loss, please utilize the Jupyter notebooks and additional code available at the <a href="https://github.com/midas-wyss/storm" target="_blank">STORM GitHub</a>. More information about methods and data is available at the <a href="https://www.biorxiv.org/content/10.1101/870055v1" target="_blank">BioRxiv preprint</a> for the paper, "Sequence-to-function deep learning frameworks for engineered riboregulators".
+    </font></h2>
+    <p>
+        <IMG SRC="/static/images/Wyss_logo_official.png" ALT="wyss logo" WIDTH=200 HEIGHT=59 align="left"></IMG>
+        <IMG SRC="/static/images/MIT_logo.jpg" ALT="mit logo" WIDTH=230 HEIGHT=60 align="left"></IMG>
+        <IMG SRC="/static/images/MIT_BE_logo.jpg" ALT="mit BE logo" WIDTH=138 HEIGHT=60 align="left"></IMG></p>
+        <p style="text-align:right; line-height: 15px"><font size="-1">
+            This code is under a <a href="https://github.com/midas-wyss/storm/blob/master/LICENSE.txt" target="_blank">GPLv3 license</a>. 
+            <br>Developed by Jacqueline Valeri and Katherine Collins. For questions or feedback please contact <a href="mailto:jacqueline.valerie@wyss.harvard.edu?&cc=valerij@mit.edu&Subject=STORM%20App" target="_top">jacqueline.valerie@wyss.harvard.edu</a>.</p>
+    </font>
+    </p>
+
+    <script>
+            // code adapted from https://jsfiddle.net/gengns/j1jm2tjx/
+            function download_csv(csv, filename) {
+                var csvFile;
+                var downloadLink;
+
+            // CSV FILE
+            csvFile = new Blob([csv], {type: "text/csv"});
+
+            // Download link
+            downloadLink = document.createElement("a");
+
+            // File name
+            downloadLink.download = filename;
+
+            // We have to create a link to the file
+            downloadLink.href = window.URL.createObjectURL(csvFile);
+
+            // Make sure that the link is not displayed
+            downloadLink.style.display = "none";
+
+            // Add the link to your DOM
+            document.body.appendChild(downloadLink);
+
+            // Lanzamos
+            downloadLink.click();
+        }
+
+        function export_table_to_csv(html, filename) {
+            var csv = [];
+            var rows = document.querySelectorAll("table tr");
+
+            for (var i = 0; i < rows.length; i++) {
+                var row = [], cols = rows[i].querySelectorAll("td, th");
+
+                for (var j = 0; j < cols.length; j++) 
+                    row.push(cols[j].innerText);
+
+                csv.push(row.join(","));        
+            }
+
+    // Download CSV
+    download_csv(csv.join("\n"), filename);
+    }
+
+    document.querySelector("button").addEventListener("click", function () {
+        //var html = document.querySelector("my_table").outerHTML;
+        var html = document.getElementById('my_table');
+        export_table_to_csv(html, "results.csv");
+    });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+gunicorn==19.10.0
+numpy==1.17.2
+Flask==1.0.2
+Flask-SocketIO==1.0b4
+tensorflow==1.13.1
+Keras==2.2.4
+pysster==1.2.1
+isolearn==0.2.1
+rq==1.2.0
+pandas==0.23.0
+git+git://github.com/johli/seqprop.git

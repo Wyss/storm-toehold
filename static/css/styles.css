@@ -1,0 +1,110 @@
+h1 {
+ color: black;
+ background-color: white;
+ font-weight: bold;
+ font-size: 150%;
+ margin: 5%; 
+}
+
+h2 {
+ color: black;
+ background-color: white;
+ font-size: 125%;
+ margin: 5%;
+}
+
+div {
+  background-color: white;
+}
+
+p {
+  font-size: 125%;
+  margin: 5%;
+}
+
+* {
+ font-family: "graphik";
+ font-weight: normal;
+}
+
+button[type=export] {
+
+    padding:5px 15px;
+
+    background: #1cafeb;
+
+    border: black;
+    
+    font-weight: bold;
+    
+    font-size: 100%;
+    
+    font-family: "graphik";
+
+    border-radius: 5px;
+        
+    min-width: 5%;
+    
+    float: left;
+    
+    cursor: pointer;
+
+    margin: 10px;
+
+}
+
+button[type = export]:hover {
+    color: white;
+}
+
+input[type=submit] {
+
+    padding:5px 15px;
+
+    background: #1cafeb;
+
+    border: black;
+    
+    font-weight: bold;
+    
+    font-size: 100%;
+    
+    font-family: "graphik";
+
+    border-radius: 5px;
+        
+    min-width: 5%;
+    
+    float: left;
+
+    cursor: pointer;
+    
+    margin: 10px;
+
+}
+
+input[type = "submit"]:hover {
+    color: white;
+}
+
+.collapsible {
+  background-color: #d3d3d3;
+  color: black;
+  cursor: pointer;
+  font-size: 15px;
+  margin: 1%;
+}
+
+.active, .collapsible:hover {
+  color: #1cafeb;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
+}
+
+.wrapper { overflow-x: auto; }
+.wrapper table { white-space: nowrap }

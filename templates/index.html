@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<title>STORM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+<meta charset="utf-8">
+<head> 
+    <h1 style="text-align:center" ><IMG SRC="/static/images/storm_logo-01.png" ALT="storm logo" align="middle" WIDTH=400 HEIGHT=170></IMG></h1>
+    <h2 style="text-align:left">STORM (Sequence-based Toehold Optimization & Redesign Model) was developed collaboratively between the Predictive BioAnalytics Lab at the <a href="https://wyss.harvard.edu" target="_blank">Wyss Institute at Harvard University</a> and the <a href="https://collinslab.mit.edu" target="_blank">Collins Lab</a> at <a href="https://be.mit.edu" target="_blank">MIT</a> to automate the prediction of toehold switch performance in silico. 
+        <button type="button" class="collapsible">What is a toehold switch?</button>
+            <div class="content">
+                <font size="-1.5">
+            A toehold switch is a riboregulator that can sense and respond to nucleic acids. Toehold switches are compatible with freeze-dried cell-free systems, making them good diagnostic tools for viruses such as Ebola and Zika. To learn more about previous work on toehold switches, check out how Wyss researchers have used them in a variety of <a href="https://wyss.harvard.edu/technology/toehold-switches-for-synthetic-biology/" target="_blank">synthetic biology applications</a>.</font>
+            </div>
+        <br> Given the trigger or switch sequence, STORM uses a pretrained convolutional neural network to predict ON and OFF values. STORM includes the option to redesign toeholds with improved ON/OFF ratios. 
+    </h2>
+</head>
+<body>
+    <h2>
+    <font style="text-align:left" >Toehold should be 30 nucleotide or 59 nucleotide DNA or RNA sequence.
+    <button type="button" class="collapsible">What does this mean?</button>
+        <div class="content" HEIGHT=100%>
+            <IMG SRC="/static/images/toehold_fig_explain.png" ALT="Input sequences should be 30 nucleotide trigger region or the 59 nucleotide trigger + hairpin. The 59 nucleotide sequence is built out from complementarity with the trigger, a ribosome binding site, and start codon." WIDTH=60% HEIGHT=43% align="middle"></IMG>
+        </div>
+    </font>
+</h2>
+
+    <h1>To use STORM, enter your toehold sequence(s) separated by line breaks or in FASTA format:</h1>
+    <h2><font color="red" size="+1">
+        {% if errors1 %}
+        {{ errors1 }}
+        {% endif %}
+    </font></h2>
+    <form method="post" action=".">
+        <p><textarea name="seq" id="seq" autocomplete="on" class="form-control" placeholder="AAAAACACAGACTACATTTGTAATTAGAATAACAGAGGAGAATTCTAATGACAAATGTA" rows="6" style="min-width: 100%; min-height: 10%; font-size: 100%" />AAAAACACAGACTACATTTGTAATTAGAATAACAGAGGAGAATTCTAATGACAAATGTA</textarea></p>
+        <p><input type="submit" name="action" value= "Predict ON and OFF values"/></p>
+        <p><input type="submit" name="action" value= "Redesign toehold sequence**"/></p>
+        <br>
+        <h2 style="text-align:left" >**Please note that due to the nature of the algorithm, redesign takes about ~5 minutes per sequence, so we only allow ONE sequence to be optimized at a time.
+        </form>
+            <button type="button" class="collapsible">Why does this take so long?</button>
+            <div class="content">
+                <font size="-1.5">
+            For each sequence, the target ON/OFF values is set to 1 and supplied to an application of <a href="https://github.com/johli/seqprop" target="_blank">SeqProp</a>, an open-source python package developed by Georg Seelig's lab that enables streamlined development of gradient ascent pipelines for genomic and RNA biology applications. At each iteration, the ON/OFF ratio of the initial toehold sequence is predicted and the difference between the predicted values and target values is computed. This discrepancy between predicted and target values is then propagated back through the model to update the input sequence in the direction that decreases the difference between the predicted ON/OFF value and the target. The updated toehold position weight matrix is used as input to the next round of optimization, and at the last round of iteration, the final sequence is composed of nucleotides with the highest probabilities in the position weight matrix. STORM iterates through this process five times and selects the toehold with the highest ON/OFF value. This lengthy algorithm is why redesign is limited to 1 sequence at a time. </font>
+            </div>
+        </h2>
+    <h1 style="text-align:left" >Interested in finding the best toehold in a region? Enter a genomic sequence:</h1>
+    <h2><font color="red" size="+1">
+        {% if errors2 %}
+        {{ errors2 }}
+        {% endif %}
+    </font></h2>
+    <form method="post" action=".">
+        <p><textarea name="seq" id="seq" autocomplete="on" class="form-control" placeholder="Region as RNA or DNA" rows="6" style="min-width: 100%; min-height: 10%; font-size: 100%"/></textarea></p>
+        <p><input type="submit" name="action" value= "Rank candidate toeholds"/></p>
+    </form>
+    <br>
+    <h2 style="text-align:left">Jupyter notebooks and additional code are available at the <a href="https://github.com/midas-wyss/storm" target="_blank">STORM GitHub</a>. More information about methods and data is available at the <a href="https://www.biorxiv.org/content/10.1101/870055v1" target="_blank">BioRxiv preprint</a> for the paper, "Sequence-to-function deep learning frameworks for engineered riboregulators".
+    </font></h2>
+    <p>
+        <IMG SRC="/static/images/Wyss_logo_official.png" ALT="wyss logo" WIDTH=200 HEIGHT=59 align="left"></IMG>
+        <IMG SRC="/static/images/MIT_logo.jpg" ALT="mit logo" WIDTH=230 HEIGHT=60 align="left"></IMG>
+        <IMG SRC="/static/images/MIT_BE_logo.jpg" ALT="mit BE logo" WIDTH=138 HEIGHT=60 align="left"></IMG></p>
+        <p style="text-align:right; line-height: 15px"><font size="-1">
+            This code is under a <a href="https://github.com/midas-wyss/storm/blob/master/LICENSE.txt" target="_blank">GPLv3 license</a>. 
+            <br>Developed by Jacqueline Valeri and Katherine Collins. For questions or feedback please contact <a href="mailto:jacqueline.valerie@wyss.harvard.edu?&cc=valerij@mit.edu&Subject=STORM%20App" target="_top">jacqueline.valerie@wyss.harvard.edu</a>.
+    </p></font>
+</p></form>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>
+</html>
