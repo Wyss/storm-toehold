@@ -1,183 +1,198 @@
 {
-  "version": 1,
   "locale": "en_US.UTF-8",
+  "version": 1,
+  "metadata": {
+    "appmode": "python-api",
+    "entrypoint": "app"
+  },
   "files": {
-    "static/images/old/.DS_Store": {
-      "checksum": "5b3692aa98a9c345a53ea2a122aac625"
-    },
-    "helper_gradient_ascent_functions.py": {
-      "checksum": "70c720ea855a3ec5a1c1054966858185"
-    },
-    "static/images/MIT_BE_logo.jpg": {
-      "checksum": "70ba9ca889a675af72f50f023fc7ac3c"
-    },
-    "static/images/old/Wyss_logo.jpeg": {
-      "checksum": "7c50eefa6a91b3c1ffa204c440502bb4"
-    },
-    "templates/job_failed.html": {
-      "checksum": "94e3d6ea856991ebeb9f223b88f54823"
-    },
-    "final_trained_model.h5": {
-      "checksum": "d3721409676327f35180f5bd86de393c"
-    },
-    "sequence_prediction_with_model.ipynb": {
-      "checksum": "256c1e9addaac53fa91bbf7e0edef77d"
-    },
-    "app.py": {
-      "checksum": "486c04517a871fe67fdc629aed990279"
-    },
-    "task_dummy.pyc": {
-      "checksum": "8dc6090a8115998a1c87b40666ca3b73"
-    },
-    "static/images/old/toehold_fig_explain_old.png": {
-      "checksum": "b65cf5910272c18187fa7f536bdebbef"
-    },
-    "static/images/old/storm_logo-02.png": {
-      "checksum": "d97b0ea56d01245524556ae77b5bb14f"
-    },
-    "static/css/.DS_Store": {
-      "checksum": "194577a7e20bdcc7afbb718f502c134c"
-    },
-    "templates/redesign_loading.html": {
-      "checksum": "7261a434159248c959d25d7fecd41833"
+    "requirements.txt": {
+      "checksum": "ca98e58ec7830b8c72e33f115856a78f"
     },
     "Procfile": {
       "checksum": "d3e8850d2c4a2db7b7e56aa65dacb918"
     },
-    "models/onoff_original_model_weights.h5": {
-      "checksum": "67636967aeb330f1b8ce1a93c05f0fe4"
-    },
-    "predict_toeholds.pyc": {
-      "checksum": "1d101ab746a317cf0e46f8729740cfc8"
-    },
-    ".DS_Store": {
-      "checksum": "1ecc4f583537f56dc3a7411a02335ebf"
-    },
-    "static/.DS_Store": {
-      "checksum": "ea792f60a48768264c9af7d6ec0cdd8a"
-    },
-    "static/images/loading.gif": {
-      "checksum": "d71d8ccb7264fb1ca4a4ec9a871849d1"
-    },
-    "worker.pyc": {
-      "checksum": "aaa43ef5932eb88b8f7929eda1e95fff"
-    },
-    "static/images/toehold_fig_explain.png": {
-      "checksum": "fb1dde678b6bb2914cb402ded0ba403e"
-    },
-    "runtime.txt": {
-      "checksum": "32497525824ce8fd857d41302aa011fa"
-    },
-    "static/images/old/Wyss_logo.ai": {
-      "checksum": "a8bd2f3d27126494d036db742c2224ba"
-    },
-    "change_30nt_to_59nt.py": {
-      "checksum": "4bad6bca256b418a775cb756f9f59bf3"
-    },
-    "models/only_green_trained_model_weights.h5": {
-      "checksum": "6538e8a59cfeb8ce42a2fa4e719bf806"
-    },
-    "worker.py": {
-      "checksum": "40395a12c70ee9b7a144d5f93dcd7bfb"
-    },
     "static/images/old/toehold_fig_oldv2.png": {
       "checksum": "7a58587df795dcfc325c0dfad54fb234"
-    },
-    ".ipynb_checkpoints/sequence_prediction_with_model copy-checkpoint.ipynb": {
-      "checksum": "a334553b33d5f2fe06c6e719a50ddfb4"
-    },
-    "static/images/old/Wyss_logo.jpg": {
-      "checksum": "84ebeccc9a66bcaa40642b1d3c1b0cb6"
-    },
-    "app.pyc": {
-      "checksum": "7f8727d10f5d901a06e361d3386755c0"
-    },
-    "requirements.txt": {
-      "checksum": "ca98e58ec7830b8c72e33f115856a78f"
-    },
-    "templates/generic_loading.html": {
-      "checksum": "8d58c2027ff51c7ac47dc21f7ff5bec9"
-    },
-    "dummy.py": {
-      "checksum": "f647b3d38565464491c8fbc93d270dde"
-    },
-    "models/freeze_weights_tf_onoff_model_weights.h5": {
-      "checksum": "f7dd66261251ac1fb2b379ad3f1389a9"
-    },
-    "final_trained_model_weights.h5": {
-      "checksum": "2acafbea136c08ae0d5d020d5eee3b3c"
-    },
-    "models/only_green_trained_model.h5": {
-      "checksum": "ea78fb9067cc596c3835270066f6e018"
-    },
-    "static/css/styles.css": {
-      "checksum": "35ebb0bce9577cde4dd519e3f96f65b5"
     },
     "templates/prediction_results.html": {
       "checksum": "162ea063d93f36e783fe779114b70c5f"
     },
-    "static/images/.DS_Store": {
-      "checksum": "885732e408a6ae379d542ea51188998f"
-    },
-    "predict_toeholds.py": {
-      "checksum": "0f8bc10e7d042b982e31a0b84efdbd4f"
-    },
-    "task_dummy.py": {
-      "checksum": "4c36e43bfdbb437fdad1bd0eafe44f55"
-    },
-    "change_30nt_to_59nt.pyc": {
-      "checksum": "2ce9529223991961ecbe5840985a4ab6"
-    },
     "static/images/storm_logo.ai": {
       "checksum": "9055aaf2e245845506a62150ef33e168"
     },
-    "static/images/Wyss_logo_official.png": {
-      "checksum": "322442250c22b8594f7ad6a6625de5a3"
+    "static/css/.DS_Store": {
+      "checksum": "194577a7e20bdcc7afbb718f502c134c"
+    },
+    "LICENSE": {
+      "checksum": "1ebbd3e34237af26da5dc08a4e440464"
+    },
+    "dummy.py": {
+      "checksum": "f647b3d38565464491c8fbc93d270dde"
+    },
+    "helper_gradient_ascent_functions.py": {
+      "checksum": "70c720ea855a3ec5a1c1054966858185"
+    },
+    "models/only_green_trained_model.h5": {
+      "checksum": "ea78fb9067cc596c3835270066f6e018"
     },
     "models/freeze_weights_tf_onoff_model.h5": {
       "checksum": "d472c73c36b18d558fe9f52f5c04227f"
     },
-    "static/images/toehold_fig_explain.ai": {
-      "checksum": "50fe440888842d35732e652e2d7d4d2f"
+    "worker.pyc": {
+      "checksum": "aaa43ef5932eb88b8f7929eda1e95fff"
     },
-    "static/images/MIT_logo.jpg": {
-      "checksum": "205036b425c2a9b03116684d2cad8da2"
+    "static/images/old/.DS_Store": {
+      "checksum": "5b3692aa98a9c345a53ea2a122aac625"
     },
-    "templates/index.html": {
-      "checksum": "5d7276c4ef1dc4d55ca7401bafd43ead"
+    "predict_toeholds.py": {
+      "checksum": "0f8bc10e7d042b982e31a0b84efdbd4f"
+    },
+    "static/images/old/Wyss_logo.jpeg": {
+      "checksum": "7c50eefa6a91b3c1ffa204c440502bb4"
+    },
+    "runtime.txt": {
+      "checksum": "32497525824ce8fd857d41302aa011fa"
+    },
+    "final_trained_model_weights.h5": {
+      "checksum": "2acafbea136c08ae0d5d020d5eee3b3c"
     },
     "app_dummy.py": {
       "checksum": "46ce289334fda09692f8735602e841eb"
     },
-    "static/images/storm_logo-01.png": {
-      "checksum": "5cc495ffa3e024a72e9b38b80acef2e6"
+    "static/images/loading.gif": {
+      "checksum": "d71d8ccb7264fb1ca4a4ec9a871849d1"
     },
-    "dump.rdb": {
-      "checksum": "a4c36a88ef42c0bebcb1a69d8b991fb7"
+    "templates/generic_loading.html": {
+      "checksum": "8d58c2027ff51c7ac47dc21f7ff5bec9"
+    },
+    "static/images/Wyss_logo_official.png": {
+      "checksum": "322442250c22b8594f7ad6a6625de5a3"
+    },
+    "static/images/old/Wyss_logo.ai": {
+      "checksum": "a8bd2f3d27126494d036db742c2224ba"
+    },
+    "__pycache__/app.cpython-35.pyc": {
+      "checksum": "3a5b6c2d310573c3ca338e504c34c249"
+    },
+    "models/only_green_trained_model_weights.h5": {
+      "checksum": "6538e8a59cfeb8ce42a2fa4e719bf806"
+    },
+    "static/css/styles.css": {
+      "checksum": "35ebb0bce9577cde4dd519e3f96f65b5"
+    },
+    "static/images/toehold_fig_explain.ai": {
+      "checksum": "50fe440888842d35732e652e2d7d4d2f"
     },
     "templates/redesign_results.html": {
       "checksum": "d266243f8bd4b3e37a3a74852fdb6440"
     },
+    "task_dummy.py": {
+      "checksum": "4c36e43bfdbb437fdad1bd0eafe44f55"
+    },
+    "static/images/old/Wyss_logo.jpg": {
+      "checksum": "84ebeccc9a66bcaa40642b1d3c1b0cb6"
+    },
+    "task_dummy.pyc": {
+      "checksum": "8dc6090a8115998a1c87b40666ca3b73"
+    },
+    "static/images/storm_logo-01.png": {
+      "checksum": "5cc495ffa3e024a72e9b38b80acef2e6"
+    },
+    ".DS_Store": {
+      "checksum": "8388affeed383b46a3da4f4168166b4d"
+    },
+    "final_trained_model.h5": {
+      "checksum": "d3721409676327f35180f5bd86de393c"
+    },
+    "app.py": {
+      "checksum": "486c04517a871fe67fdc629aed990279"
+    },
+    "templates/index.html": {
+      "checksum": "5d7276c4ef1dc4d55ca7401bafd43ead"
+    },
+    "change_30nt_to_59nt.pyc": {
+      "checksum": "2ce9529223991961ecbe5840985a4ab6"
+    },
+    "models/onoff_original_model_weights.h5": {
+      "checksum": "67636967aeb330f1b8ce1a93c05f0fe4"
+    },
+    "templates/redesign_loading.html": {
+      "checksum": "7261a434159248c959d25d7fecd41833"
+    },
+    "static/images/old/toehold_fig_explain_old.png": {
+      "checksum": "b65cf5910272c18187fa7f536bdebbef"
+    },
+    "app.pyc": {
+      "checksum": "7f8727d10f5d901a06e361d3386755c0"
+    },
+    "change_30nt_to_59nt.py": {
+      "checksum": "4bad6bca256b418a775cb756f9f59bf3"
+    },
+    "worker.py": {
+      "checksum": "40395a12c70ee9b7a144d5f93dcd7bfb"
+    },
+    ".gitignore": {
+      "checksum": "036285fe1dde3d75ef616c975ee58a5b"
+    },
+    "__pycache__/predict_toeholds.cpython-35.pyc": {
+      "checksum": "cd59baf1d87f27eb9dbea5c34ba23bd9"
+    },
+    "static/.DS_Store": {
+      "checksum": "ea792f60a48768264c9af7d6ec0cdd8a"
+    },
+    "static/images/MIT_logo.jpg": {
+      "checksum": "205036b425c2a9b03116684d2cad8da2"
+    },
     "models/.DS_Store": {
       "checksum": "fae15b007c78e761834c62be1e550f60"
+    },
+    "templates/job_failed.html": {
+      "checksum": "94e3d6ea856991ebeb9f223b88f54823"
     },
     "templates/.DS_Store": {
       "checksum": "b065a25ad15b83411f1855250ba0684c"
     },
+    "predict_toeholds.pyc": {
+      "checksum": "1d101ab746a317cf0e46f8729740cfc8"
+    },
+    "dump.rdb": {
+      "checksum": "a4c36a88ef42c0bebcb1a69d8b991fb7"
+    },
+    "models/freeze_weights_tf_onoff_model_weights.h5": {
+      "checksum": "f7dd66261251ac1fb2b379ad3f1389a9"
+    },
+    "static/images/toehold_fig_explain.png": {
+      "checksum": "fb1dde678b6bb2914cb402ded0ba403e"
+    },
+    "static/images/.DS_Store": {
+      "checksum": "885732e408a6ae379d542ea51188998f"
+    },
     "models/onoff_original_model.h5": {
       "checksum": "bcb52b00c34b6ddab706dd357b45006b"
+    },
+    "static/images/MIT_BE_logo.jpg": {
+      "checksum": "70ba9ca889a675af72f50f023fc7ac3c"
+    },
+    "static/images/old/storm_logo-02.png": {
+      "checksum": "d97b0ea56d01245524556ae77b5bb14f"
+    },
+    "sequence_prediction_with_model.ipynb": {
+      "checksum": "256c1e9addaac53fa91bbf7e0edef77d"
+    },
+    ".ipynb_checkpoints/sequence_prediction_with_model copy-checkpoint.ipynb": {
+      "checksum": "a334553b33d5f2fe06c6e719a50ddfb4"
+    },
+    "README.md": {
+      "checksum": "f3e0b1bb5a743b8e1cb18d1f1251abe6"
     }
   },
   "python": {
-    "version": "3.7.7",
+    "version": "3.5.0",
     "package_manager": {
       "version": "20.0.2",
       "package_file": "requirements.txt",
       "name": "pip"
     }
-  },
-  "metadata": {
-    "entrypoint": "app",
-    "appmode": "python-api"
   }
 }
