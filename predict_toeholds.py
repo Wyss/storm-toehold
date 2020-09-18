@@ -33,7 +33,7 @@ def run_prediction(arg):
     X = np.stack([_get_one_hot_encoding(s) for s in seqs]).astype(np.float32)
     original_predictions = predict_seq(X, 'models/onoff_original_model.h5', 'models/onoff_original_model_weights.h5')
     transfer_predictions = predict_seq(X, 'models/freeze_weights_tf_onoff_model.h5', 'models/freeze_weights_tf_onoff_model.h5')
-
+    print(original_predictions)
     orig_preds = [np.round(float(x), 3) for x in original_predictions]
     tf_preds = [np.round(float(x), 3) for x in transfer_predictions]
     
